@@ -1,0 +1,4 @@
+.block {
+    grid-area: navBlock;
+    background: yellow;
+}

@@ -1,0 +1,12 @@
+.wrapper {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "navBlock content"
+    "footer footer";
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 20% 1fr;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}

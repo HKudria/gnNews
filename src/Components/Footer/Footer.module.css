@@ -1,0 +1,4 @@
+.block {
+    grid-area: footer;
+    background: gray;
+}
