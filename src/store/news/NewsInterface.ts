@@ -1,4 +1,4 @@
-export interface IProduct {
+export interface INews {
     source: {
         id: string,
         name: string
@@ -13,7 +13,7 @@ export interface IProduct {
 }
 
 export interface NewsState {
-    news: IProduct[] | [];
+    news: INews[] | [];
     status: string;
     count: number;
 }
