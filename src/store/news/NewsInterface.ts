@@ -14,7 +14,7 @@ export interface INews {
 
 export interface NewsState {
     news: INews[] | [];
-    status: string;
+    status: LoadingStatusEnum;
     count: number;
     view: ViewEnums
 }
@@ -24,4 +24,8 @@ export enum ViewEnums {
     BLOCK = 'Block'
 }
 
-
+export enum LoadingStatusEnum {
+    LOADING= 'loading',
+    FAILED = 'failed',
+    IDLE = 'idle',
+}

@@ -6,14 +6,14 @@ import s from './App.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
-  return (
-      <div className={s.wrapper}>
-        <Header />
-        <Nav />
-        <Main />
-        <Footer />
-      </div>
-  );
+    return (
+        <div className={s.wrapper}>
+            <Header/>
+            <Nav/>
+            <Main/>
+            <Footer/>
+        </div>
+    );
 };
 
 export default App;

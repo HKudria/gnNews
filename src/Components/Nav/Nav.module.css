@@ -1,4 +1,32 @@
 .block {
     grid-area: navBlock;
-    background: yellow;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity)) !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.block a{
+    text-decoration: none;
+}
+
+.address {
+    width: 50%;
+    min-width: 150px;
+    height: 26px;
+}
+
+.image {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.active {
+    color: gray;
+    text-decoration: underline;
 }

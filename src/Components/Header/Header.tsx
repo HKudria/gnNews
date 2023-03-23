@@ -27,7 +27,7 @@ const Header = () => {
         <div className={s.block}>
             <Navbar bg="light" expand="lg" className={s.zIndex}>
                 <Container>
-                    <NavLink to={'/'} className={'navbar-brand'}>gnNews</NavLink>
+                    <NavLink to={'/'} className={'navbar-brand'} >gnNews</NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">

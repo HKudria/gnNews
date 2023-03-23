@@ -1,10 +1,13 @@
 .block {
     grid-area: content;
-    background: blue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
     overflow: scroll;
+}
+
+.alert {
+    height: 60px;
 }
