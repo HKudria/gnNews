@@ -2,3 +2,7 @@
     grid-area: header;
     background: olive;
 }
+
+.zIndex {
+    z-index: 1;
+}

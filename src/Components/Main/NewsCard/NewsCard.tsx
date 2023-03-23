@@ -1,27 +1,23 @@
-import Card from 'react-bootstrap/Card';
-import {INews} from '../../../store/news/NewsInterface';
-import previeImage from '../../../assets/image/no_preview.jpg'
-import s from './NewsCard.module.css'
+import {INews, ViewEnums} from '../../../store/news/NewsInterface';
 import {useState} from 'react';
 import NewsModal from '../NewsModal/NewsModal';
-const NewsCard = (props:INews) => {
+import {useAppSelector} from '../../../store/hooks';
+import {getNewsState} from '../../../store/news/newsSlice';
+import Block from './Block/Block';
+import List from './List/List';
+
+const NewsCard = (news:INews) => {
     const [isModal, setIsModal] = useState(false);
+    const newsStore = useAppSelector(getNewsState);
+
     const toggleModal = () => {
-        console.log('test')
         setIsModal(!isModal)
     }
 
     return (
         <>
-            {isModal && <NewsModal news={props} closeModal={toggleModal} />}
-            <Card className={s.card} onClick={toggleModal}>
-                <Card.Img variant="top" src={props.urlToImage ?? previeImage}/>
-                <Card.Body>
-                    <Card.Title>{props.title}</Card.Title>
-                    <Card.Text>{props.source.name}</Card.Text>
-                    <Card.Text>{props.publishedA}</Card.Text>
-                </Card.Body>
-            </Card>
+            {isModal && <NewsModal news={news} closeModal={toggleModal} />}
+            {newsStore.view === ViewEnums.BLOCK ? <Block news={news} toggleModal={toggleModal} /> : <List news={news} toggleModal={toggleModal} />}
         </>
     )
 }

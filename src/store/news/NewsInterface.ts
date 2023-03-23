@@ -8,7 +8,7 @@ export interface INews {
     description?: string;
     url: string;
     urlToImage?: string;
-    publishedA: string;
+    publishedAt: string;
     content?: string;
 }
 
@@ -16,7 +16,12 @@ export interface NewsState {
     news: INews[] | [];
     status: string;
     count: number;
+    view: ViewEnums
 }
 
+export enum ViewEnums {
+    LIST= 'List',
+    BLOCK = 'Block'
+}
 
 
