@@ -1,3 +1,5 @@
+import {parseNews} from '../store/news/newsSlice';
+
 export const Countries = [
     {
         'code': 'ar',
@@ -233,4 +235,12 @@ export interface CountriesInterface {
     code: string,
     img: string,
     name: string,
+}
+
+export const checkCountryRoute = (path: string, countryCode?: string) => {
+    let isCountryOnList = false;
+    Countries.map((el:  CountriesInterface) => {
+        if(el.code === countryCode) isCountryOnList = true;
+    })
+    return !(!isCountryOnList && path.match(/^\/country\/*/gm));
 }

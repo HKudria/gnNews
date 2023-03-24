@@ -1,0 +1,24 @@
+{
+  "interface": {
+    "newsCount": "Ilość artykułów: ",
+    "date": "Bieżąca data: ",
+    "block": "Kafelki",
+    "list": "Lista",
+    "headerModal": "Główny modal"
+  },
+  "message": {
+    "noDescription": "Opis nie dostępny",
+    "modalMessage": "Najtrudniejsze to praca z Redux'em i zrobienie kilku testów, nigdy wcześniej tego nie robiłem"
+  },
+  "error": {
+    "loading": "Coś poszło nie tak pod czas załadunku artykułów"
+  },
+  "button": {
+    "source": "Do strony resursu",
+    "close": "Zamknij",
+    "notFound": "Powrót na stronę główną",
+    "modal": "Modal",
+    "view": "Zmienić widok: ",
+    "language": "Zmienić język: "
+  }
+}

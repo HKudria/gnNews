@@ -1,23 +1,25 @@
 import {Button, Modal} from 'react-bootstrap';
-import s from './NewsModal.module.css'
+import s from './HeaderModal.module.css'
+import {useTranslation} from 'react-i18next';
 
 interface HeaderModalPropsInterface {
     closeModal: () => void
 }
 const HeaderModal = ({closeModal} : HeaderModalPropsInterface) => {
+    const {t} = useTranslation('common');
 
     return (
         <div className={s.background}>
             <div className={`modal show ${s.modal}`}>
                 <Modal.Dialog>
                     <Modal.Header closeButton onClick={closeModal}>
-                        <Modal.Title>Header module</Modal.Title>
+                        <Modal.Title>{t('interface.headerModale')}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p>The most difficulties staff is work with redux and make some test, I'd never done it before</p>
+                        <p>{t('message.modalMessage')}</p>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={closeModal}>Close</Button>
+                        <Button variant="secondary" onClick={closeModal}>{t('button.close')}</Button>
                     </Modal.Footer>
                 </Modal.Dialog>
             </div>

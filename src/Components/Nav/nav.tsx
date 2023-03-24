@@ -7,7 +7,7 @@ const Nav = () => {
         <div className={s.block}>
             {Countries.map((el: CountriesInterface) => {
                 return (
-                    <NavLink key={el.code} to={`/${el.code}`}>
+                    <NavLink key={el.code} to={`/country/${el.code}`}>
                         {({ isActive }) => (
                             <div className={`${s.address}` }>
                                 <img className={s.image} src={el.img} alt={el.name} />

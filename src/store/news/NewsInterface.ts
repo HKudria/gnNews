@@ -16,16 +16,22 @@ export interface NewsState {
     news: INews[] | [];
     status: LoadingStatusEnum;
     count: number;
-    view: ViewEnums
+    view: ViewEnums;
+    language: LanguageEnums;
 }
 
 export enum ViewEnums {
-    LIST= 'List',
-    BLOCK = 'Block'
+    LIST = 'List',
+    BLOCK = 'Block',
 }
 
 export enum LoadingStatusEnum {
-    LOADING= 'loading',
+    LOADING = 'loading',
     FAILED = 'failed',
     IDLE = 'idle',
+}
+
+export enum LanguageEnums {
+    PL = 'pl',
+    EN = 'en',
 }

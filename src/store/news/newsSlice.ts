@@ -1,6 +1,6 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 
-import {LoadingStatusEnum, NewsState, ViewEnums} from './NewsInterface';
+import {LanguageEnums, LoadingStatusEnum, NewsState, ViewEnums} from './NewsInterface';
 
 import {RootState} from '../store';
 
@@ -11,13 +11,14 @@ const initialState: NewsState = {
     news: [],
     status: LoadingStatusEnum.LOADING,
     count: 0,
-    view: ViewEnums.BLOCK
+    view: ViewEnums.BLOCK,
+    language: LanguageEnums.EN,
 };
 
-export const parseNews = createAsyncThunk('products/fetchProducts', async (country: string, { rejectWithValue }) => {
+export const parseNews = createAsyncThunk('products/fetchProducts', async (country: string, {rejectWithValue}) => {
     const response = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}`);
     const data = await response.json();
-    if(data.status === 'ok'){
+    if (data.status === 'ok') {
         return await data;
     }
     return rejectWithValue(data.code);
@@ -28,8 +29,11 @@ export const newsSlice = createSlice({
     name: 'news',
     initialState,
     reducers: {
-        changeView(state) {
+        setView(state) {
             state.view = state.view === ViewEnums.BLOCK ? ViewEnums.LIST : ViewEnums.BLOCK
+        },
+        setLanguage(state) {
+            state.language = state.language === LanguageEnums.EN ? LanguageEnums.PL : LanguageEnums.EN
         },
     },
     extraReducers: (builder) => {
@@ -48,7 +52,7 @@ export const newsSlice = createSlice({
     },
 });
 
-export const {changeView} = newsSlice.actions;
+export const {setView, setLanguage} = newsSlice.actions;
 
 export const getNewsState = (state: RootState): NewsState => state.news;
 

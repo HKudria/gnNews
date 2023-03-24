@@ -2,8 +2,11 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import NotFoundPage from './NotFoundPage';
 
-test('renders learn react link', () => {
+test('Render notFoundPage', () => {
   render(<NotFoundPage/>);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const buttonReturn = screen.getByText(/Return to main page/i);
+  expect(buttonReturn).toBeInTheDocument();
+
+  const image = screen.getByAltText(/notFound/i);
+  expect(image).toBeInTheDocument();
 });

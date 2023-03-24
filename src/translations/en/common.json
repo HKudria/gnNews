@@ -1,0 +1,24 @@
+{
+  "interface": {
+    "newsCount": "News count: ",
+    "date": "Current date: ",
+    "block": "Block",
+    "list": "List",
+    "headerModal": "Header modal"
+  },
+  "message": {
+    "noDescription": "Description not available",
+    "modalMessage": "The most difficulties staff is work with redux and make some test, I'd never done it before"
+  },
+  "error": {
+    "loading": "Something went wrong while update news state!"
+  },
+  "button": {
+    "source": "Go to source",
+    "close": "Close",
+    "notFound": "Return to main page",
+    "modal": "Modal",
+    "view": "Change view: ",
+    "language": "Change language: "
+  }
+}

@@ -18,7 +18,6 @@ const Block = ({news, toggleModal}: BlockPropsInterface) => {
                 <Card.Img variant="top" className={s.image} src={news.urlToImage ?? previeImage}/>
                 <Card.Body>
                     <Card.Title>{news.title}</Card.Title>
-                    <Card.Text></Card.Text>
                 </Card.Body>
                 <Card.Footer><p>{news.source.name}</p><p>{date.toLocaleString()}</p></Card.Footer>
             </Card>
