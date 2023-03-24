@@ -14,7 +14,7 @@ const HeaderModal = ({closeModal} : HeaderModalPropsInterface) => {
                         <Modal.Title>Header module</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p>The most difficulties staff is work with redux and make some test, I'd never did it before</p>
+                        <p>The most difficulties staff is work with redux and make some test, I'd never done it before</p>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={closeModal}>Close</Button>

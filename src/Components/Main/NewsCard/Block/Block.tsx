@@ -20,7 +20,7 @@ const Block = ({news, toggleModal}: BlockPropsInterface) => {
                     <Card.Title>{news.title}</Card.Title>
                     <Card.Text></Card.Text>
                 </Card.Body>
-                <Card.Footer><p>{news.source.name}</p><p>{date.toString()}</p></Card.Footer>
+                <Card.Footer><p>{news.source.name}</p><p>{date.toLocaleString()}</p></Card.Footer>
             </Card>
         </>
     )
