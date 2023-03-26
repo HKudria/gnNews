@@ -13,7 +13,7 @@ const HeaderModal = ({closeModal} : HeaderModalPropsInterface) => {
             <div className={`modal show ${s.modal}`}>
                 <Modal.Dialog>
                     <Modal.Header closeButton onClick={closeModal}>
-                        <Modal.Title>{t('interface.headerModale')}</Modal.Title>
+                        <Modal.Title>{t('interface.headerModal')}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <p>{t('message.modalMessage')}</p>

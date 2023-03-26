@@ -7,7 +7,7 @@ import NewsCard from './NewsCard/NewsCard';
 import {LoadingStatusEnum} from '../../store/news/NewsInterface';
 import {Alert, Spinner} from 'react-bootstrap';
 import {useTranslation} from 'react-i18next';
-import {checkCountryRoute, Countries, CountriesInterface} from '../../Helpers/Countries';
+import {checkCountryRoute} from '../../Helpers/Countries';
 
 const Main = () => {
     const {t} = useTranslation('common');
